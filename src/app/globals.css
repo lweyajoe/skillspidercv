@@ -1,0 +1,34 @@
+@import url("public/fonts/fonts.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary outline-theme-green inline-block rounded-full px-6 py-2 font-semibold shadow-sm;
+  }
+  .text-primary {
+    @apply bg-gradient-to-r from-[color:var(--theme-green)] to-[color:var(--theme-yellow)] bg-clip-text text-transparent !important;
+  }
+  .bg-primary {
+    @apply bg-gradient-to-r from-[color:var(--theme-green)] to-[color:var(--theme-yellow)] text-white;
+  }
+  .outline-theme-green {
+    @apply hover:opacity-80 hover:outline-[color:var(--theme-green)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--theme-green)];
+  }
+  .outline-theme-yellow {
+    @apply hover:opacity-80 hover:outline-[color:var(--theme-yellow)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--theme-yellow)];
+  }
+  .within-outline-theme-green {
+    @apply focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[color:var(--theme-green)] hover:opacity-80 hover:outline-[color:var(--theme-green)];
+  }
+}
+
+:root {
+  --theme-green: #086642;
+  --theme-yellow: #b4f577;
+  /* Keep the below variable names in sync with CSS_VARIABLES in globals-css.ts */
+  --top-nav-bar-height: 3.5rem;
+  --resume-control-bar-height: 3rem;
+  --resume-padding: 1.5rem;
+}
